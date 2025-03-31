@@ -24,29 +24,6 @@ useEffect(()=> {
  }
 
   return (
-    // <div className='login_container'>
-    //   <h1>Вход</h1>
-    //   <Form name='login' layout='vertical' onFinish={onFinish}>
-    //     <Form.Item
-    //       label='Имя пользователя'
-    //       name='username'
-    //       rules={[{required: true, message: 'Введите имя пользователя!'}]}
-    //     >
-    //       <Input autoComplete="username"/>
-    //     </Form.Item>
-    //     <Form.Item
-    //       label="Пароль"
-    //       name="password"
-    //       rules={[{ required: true, message: 'Введите пароль!' }]}
-    //     >
-    //       <Input.Password autoComplete="current-password"/>
-    //     </Form.Item>
-    //     <Button type="primary" htmlType="submit" block loading={loading}>
-    //         Войти
-    //       </Button>
-    //   </Form>
-    //   {error && <p style={{color: 'red'}}>{error}</p>}
-    // </div>
     <div className='login-page'>
       <div className="login-card">
         <h1>Вход</h1> 
