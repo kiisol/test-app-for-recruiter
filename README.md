@@ -1,3 +1,33 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+##Test App — DummyJSON Auth + Dashboard
+##Описание
+- Авторизация пользователя через форму логина
+- Сохранение информации о пользователе
+- Переход на дашборд после логина
+- Отображение информации о текущем пользователе
+- Таблица со списком всех пользователей (имя, фамилия, возраст)
+- Адаптивный интерфейс
+- Простая архитектура на базе хуков и Redux Toolkit
+
+##Используемые технологии
+- React Router DOM
+- Redux Toolkit + React Redux
+- Axios
+- Ant Design
+- SASS (SCSS)
+- DummyJSON API
+
+##Тестовые данные для входа (или по этой ссылке https://dummyjson.com/users - можно взять любого юзера)
+Имя пользователя - sophiab
+Пароль - sophiabpass
+
+##Установка проекта
+git clone https://github.com/kiisol/test-app-for-recruiter.git
+cd test-app-for-recruiter
+npm install
+npm start
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
