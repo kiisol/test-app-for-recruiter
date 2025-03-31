@@ -45,27 +45,6 @@ const DashboardPage = () => {
   }
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      {/* <Sider  
-      breakpoint="md"
-      collapsedWidth="0"
-      onBreakpoint={(broken) => {
-        console.log('mobile?', broken);
-      }}
-      >
-        <div className="logo">Dashboard</div>
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['1']}
-          items={[
-            {
-              key: '1',
-              label: 'Пользователи',
-              onClick: () => navigate('/dashboard'),
-            }
-          ]}
-        />  
-      </Sider> */}
       <Layout>
         <Header className="header">
           <h1>Добро пожаловать, {user?.username}!</h1>
