@@ -47,36 +47,5 @@ export const useAuth = () => {
 }
 
 
-// export const useAuth = () => {
-//   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState(null);
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
 
-//   const login = async (username, password) => {
-//     const source = axios.CancelToken.source();
-    
-//     try {
-//       setLoading(true);
-//       setError(null);
-
-//       const response = await axios.post(
-//         'https://dummyjson.com/auth/login',
-//         { username, password },
-//         { cancelToken: source.token }
-//       );
-
-//       dispatch(setUser(response.data));
-//       navigate('/dashboard');
-//     } catch (err) {
-//       if (!axios.isCancel(err)) {
-//         setError(err.response?.data?.message || 'Authentication failed');
-//       }
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return { login, loading, error };
-// };
 
