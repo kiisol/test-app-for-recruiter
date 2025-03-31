@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route, Routes, BrowserRouter} from 'react-router-dom'
+import './App.scss';
+import {DashboardPage} from './pages/DashboardPage/index'
+import {LoginPage} from './pages/LoginPage/index'
+import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { setUser } from './store/authSlice/authSlice';
 
 function App() {
+  const [isAuthChecked, setIsAuthChecked] = useState(false);
+  const dispatch = useDispatch()
+
+
+
+  useEffect(()=> {
+    const savedUser = localStorage.getItem('user')
+    if (savedUser){
+      dispatch(setUser(JSON.parse(savedUser)))
+    }
+    setIsAuthChecked(true);
+  }, [dispatch])
+  if (!isAuthChecked) return null;
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LoginPage />}/>
+        <Route path='/dashboard' element={<DashboardPage />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
